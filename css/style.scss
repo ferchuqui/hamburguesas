@@ -61,6 +61,26 @@ html {
   background-position: center;
   overflow-x: hidden;
 }
+
+section{
+  padding: 3rem 9%;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: $white;
+  border: $border;
+  background: no-repeat;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+
+  &:hover{
+    color: $black;
+    background: $white;
+  }
+}
 .header{
   position: fixed;
   top: 0;
@@ -138,9 +158,57 @@ html {
     transform: rotate(180deg);
   }
 }
+.home{
+  margin-top: 7rem;
+  background: url(../images/home-bg.png);
+  background-size: cover;
+  background-position: center;
 
+.content{
+  max-width: 70rem;
+  text-align: center;
+  margin: 0 auto;
 
+  img{
+    width: 100%;
+  }
+  h3{
+    @include title-text(4rem);
+  }
+  p{
+    @include grap-text(1.7rem);
+    padding: 2rem 0;
+  }
+}
+}
 
+.service{
+  @include grid(31rem);
+  .box{
+    text-align: center;
+    padding: 2rem;
+
+    i{
+      height: 7rem;
+      width: 7rem;
+      line-height: 7rem;
+      font-size: 2rem;
+      color:$black;
+      background:$yellow;
+      margin-bottom: 1rem;
+      border-radius: 50%;
+    }
+
+    h3{
+      padding:1rem 0;
+      @include title-text(2rem);
+    }
+
+    p{
+      @include grap-text(1.5rem);
+    }
+  }
+}
 
 
 
@@ -168,6 +236,9 @@ html {
 
   .header{
     padding: 3rem;
+  }
+  section{
+    padding: 3rem 2rem;
   }
 
 }
@@ -213,7 +284,39 @@ html {
   }
 
 }
+@media(max-width: 767px){
+  .home .content .h3{
+    font-size: 2.5rem;
+  }
+  .header{
+    padding: 3rem;
+    .logo{
+      transform: translate(0);
+      left: 3rem;
+    }
+    .navbar{
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background: $black;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
+      &.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+      }
+
+      a{
+        display: block;
+        margin: 3rem 2rem;
+      }
+      .space{
+        display: none;
+      }
+    }
+  }
+}
 @media (max-width: 450px) {
 
   html{
