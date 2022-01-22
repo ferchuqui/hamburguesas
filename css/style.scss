@@ -65,6 +65,15 @@ html {
 section{
   padding: 3rem 9%;
 }
+.heading{
+  text-align: center;
+  margin-bottom: 3rem;
+
+  h3{
+    @include title-text(3rem);
+    margin-top: 1rem;
+  }
+}
 
 .btn{
   display: inline-block;
@@ -206,6 +215,45 @@ section{
 
     p{
       @include grap-text(1.5rem);
+    }
+  }
+}
+
+.menu{
+
+  .box-container{
+    @include grid(31rem);
+
+    .box{
+      text-align: center;
+
+      img{
+        height: 25rem;
+      }
+
+      &:hover img{
+        transform: translateY(-1rem);
+      }
+
+
+
+      .content{
+        padding: 1rem 0;
+
+        .stars{
+          margin-bottom: 2rem;
+          i{
+            font-size: 1.7rem;
+            color:$yellow;
+          }
+        }
+        h3{
+          @include title-text(2rem);
+        }
+        .price{
+          @include grap-text(2rem);
+        }
+      }
     }
   }
 }
