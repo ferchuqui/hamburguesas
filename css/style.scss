@@ -474,7 +474,23 @@ section{
   }
 }
 
+.footer{
+  text-align: center;
+  background: linear-gradient(transparent,$black);
 
+  .links{
+    a{
+      margin:1rem;
+    }
+  }
+  .credit{
+    @include grap-text(1.5rem);
+    padding-top:2rem;
+  }
+  span{
+    color:$yellow;
+  }
+}
 
 
 

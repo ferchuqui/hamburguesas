@@ -495,6 +495,24 @@ section {
   padding: 1.5rem 0;
 }
 
+.footer {
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000));
+  background: linear-gradient(transparent, #000);
+}
+.footer .links a {
+  margin: 1rem;
+}
+.footer .credit {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #aaa;
+  padding-top: 2rem;
+}
+.footer span {
+  color: #eacf4f;
+}
+
 /* media queries */
 @media (max-width: 1200px) {
   .header {
